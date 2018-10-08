@@ -2,7 +2,7 @@ var onoff = true;
 
 function translation(msg){
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://www.googleapis.com/language/translate/v2?q="+ msg +"&target=en&source=ko&key=AIzaSyB1nft7nPUaWby9B8u8UlL1iZjQ20_5tq8", false);
+    xhr.open("GET", "https://www.googleapis.com/language/translate/v2?q="+ msg +"&target=en&source=ko&key=~your key~", false);
     xhr.send();
     return xhr.responseText;
 }

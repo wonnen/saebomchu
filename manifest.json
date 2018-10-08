@@ -1,0 +1,29 @@
+{
+"manifest_version": 2,
+    "name": "My extension",
+    "description": "saebomchu",
+    "version": "0.0101",
+    "icons": {
+        "32" : "off.png"
+    },
+    "browser_action": {
+        "default_icon": "off.png",
+        "default_popup": "popup.html",
+        "default_title": "ddd"
+    },
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {   
+            "matches": ["https://www.twitch.tv/*"],
+
+            "js": ["jquery-3.3.1.min.js", "loop.js"],
+
+            "run_at": "document_end"
+        }
+    ]
+}
